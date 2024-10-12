@@ -34,6 +34,13 @@ gradio             4.44.0
 numpy              1.26.4
 ```
 
+#### references
+
+- https://modelers.cn/spaces/PyTorch-NPU/SDXL_Lightning
+- https://modelers.cn/spaces/PyTorch-NPU/stable-diffusion-xl-base-1
+- https://modelers.cn/spaces/PyTorch-NPU/stable-diffusion-v1_5
+- https://modelers.cn/spaces/MindSpore-Lab/SDXL-Base-1_0
+
 ----
 by Armit
 2024/10/10
