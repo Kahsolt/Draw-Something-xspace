@@ -198,12 +198,36 @@ def save_json(data:Any, fp:Path):
 
 ''' Game Const '''
 
-# 每张图可以猜多少个答案
-GAME_GUESS_MAX_COUNT = 3
+# 文本常量
+TEXT_HELP_INFO = '''
+### 我画你猜 (via Stable-Diffusion)
+
+⚪ 游戏规则
+- 点击开始游戏按钮即可新开一轮游戏，自动生成的 **游戏唯一id标识** 可用于（未结束的）游戏状态恢复
+  - 输入 **玩家昵称** 可用于历史成绩记录并加入排行榜，否则将保持游客身份
+- 在每游戏轮中，玩家有 **4** 次机会猜测给出的图片内容所对应的文本描述（中文作答，模糊匹配即算正确）
+  - 猜对：游戏结束并累计积分，获得积分随轮次数递减: **10/5/3/1** 分
+  - 猜错：系统评定给出文本相似度评分，并切换下一张图
+- 难度设计 & 提示
+  - 题面图像包含的噪声随着轮次数而降低，并会给出正确答案的字数
+  - 玩家可以给出的猜测数随轮次数而降低: **3/2/2/1** 个
+- 当前游戏未完成而直接开始新游戏时，会视为放弃游戏
+  - 每连续放弃超过 **3** 次，玩家账号将会被惩罚性地停用 **5 min**
+
+⚪ 资源链接
+- github: https://github.com/Kahsolt/Draw-Something-xspace
+- online demo: https://modelers.cn/spaces/kahsolt/Draw-Something
+'''.strip()
+TEXT_BTN_MAIN_START = '开始游戏🎮'
+TEXT_BTN_MAIN_GUESS = '就决定是你们了！🚀'
+
+# 多少次猜的机会
+GAME_GUESS_ROUND = 4
 # 猜对第k张图时的得分
 GAME_GUESS_SCORES = [10, 5, 3, 1]
 # 猜第k张图可用的猜想数
-GAME_GUESS_CHOICES = [3, 2, 1, 1]
+GAME_GUESS_CHOICES = [3, 2, 2, 1]
+GAME_GUESS_CHOCES_MAX = max(GAME_GUESS_CHOICES)
 # 放弃游戏惩罚性禁用
 GAME_ABORT_BAN_TOL  = 3
 GAME_ABORT_BAN_TEMP = 5 * 60
@@ -218,4 +242,4 @@ SD_PIPE_CALL_KWARGS = {
   'output_type': 'latent',
   'return_dict': False,
 }
-SD_PEEP_STEPS = [3, 5, 7, 9]
+SD_PEEP_STEPS = [4, 6, 7, 9]

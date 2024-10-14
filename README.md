@@ -12,6 +12,7 @@ license: mit
 ℹ 本项目来源于 [昇思MindSpore 学习打卡营第三期](https://xihe.mindspore.cn/events/mindspore_clockin_3th) - 创意应用开发  
 ℹ 应用已部署在 [modelers](https://modelers.cn/spaces) 平台，可直接访问体验空间 [https://modelers.cn/spaces/kahsolt/Draw-Something](https://modelers.cn/spaces/kahsolt/Draw-Something)  
 
+![demo](./img/demo.jpg)
 
 ```
 [hardware]

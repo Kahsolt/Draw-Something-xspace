@@ -29,11 +29,21 @@ class State:
   guest: bool = True # 游客身份
 
   @property
+  def round(self) -> int:   # zero-based
+    return GAME_GUESS_ROUND - len(self.imgs)
+  @property
   def img(self) -> npimg:
     return self.imgs[0]
   @property
+  def img_final(self) -> npimg:
+    return self.imgs[-1]
+  @property
   def info_round(self) -> str:
-    return f'请根据图片猜 {len(self.ans)} 个字 (第 {1 + len(SD_PEEP_STEPS) - len(self.imgs)} / {len(SD_PEEP_STEPS)} 轮)'
+    return f'请根据图片猜 {len(self.ans)} 个字 (第 {1 + self.round} / {GAME_GUESS_ROUND} 轮)'
+  @property
+  def info_puzzle(self) -> str:
+    return f'这幅画所用的提示词为：{self.text}'
+
 
 @dataclass
 class Record:
@@ -91,11 +101,18 @@ init_globals()
 
 ''' Logic '''
 
-CLEAR_GUESS_LIST = [None for _ in range(GAME_GUESS_MAX_COUNT)]
+def _make_tx_guess_list(gid:str) -> tuple:
+  tx_guess_list = [None for _ in range(GAME_GUESS_CHOCES_MAX)]
+  can_use = GAME_GUESS_CHOICES[states[gid].round] if game_exists(gid) else GAME_GUESS_CHOCES_MAX
+  for idx, tx_guess in enumerate(tx_guess_list):
+    tx_guess_list[idx] = {'__type__': 'update', 'visible': idx < can_use, 'value': tx_guess}
+  return tx_guess_list
 
+def game_exists(gid:str) -> bool:
+  return gid in states
 
 def game_create(username:str) -> tuple:
-  ''' ~return: tx_gid, tx_info, tx_info_round, img_sd, *tx_guess_list '''
+  ''' ~return: tx_username, tx_gid, tx_info, tx_info_round, img_sd, *tx_guess_list '''
 
   username = username.strip()
   is_guest = not username or username.startswith(GUETST_USERNAME_PREFIX)
@@ -116,7 +133,7 @@ def game_create(username:str) -> tuple:
       ban_aborts[realname] = ban_aborts.get(realname, 0) + 1
       if ban_aborts[realname] > GAME_ABORT_BAN_TOL:
         ban_users.add(realname)
-        return None, None, 'Error: 该玩家仍在封禁期', None, None, *CLEAR_GUESS_LIST
+        return None, None, 'Error: 该玩家仍在封禁期', None, None, *_make_tx_guess_list(gid)
 
   # 新开一局
   gid   = rand_gid()
@@ -125,27 +142,24 @@ def game_create(username:str) -> tuple:
   imgs  = rand_image_set(text)
   inst  = State(realname, words[0], text, imgs, guest=is_guest)
   if IS_WIN:
-    print(f'[gid-{gid}]:')
+    print(f'[gid-{gid}]')
     print('  words:', words)
     print('  text:', text)
   states[gid] = inst
 
-  return realname, gid, inst.info, inst.info_round, inst.img, *CLEAR_GUESS_LIST
-
+  return realname, gid, inst.info, inst.info_round, inst.img, *_make_tx_guess_list(gid)
 
 def game_destroy(gid:str):
   del states[gid] ; gc.collect()
-
 
 def game_restore(gid:str) -> tuple:
   ''' ~return: tx_username, tx_info, tx_info_round, img_sd, *tx_guess_list '''
 
   gid = gid.strip()
   inst = states.get(gid)
-  if inst is None: return None, 'Error: 错误的 gid', None, None, *CLEAR_GUESS_LIST
+  if inst is None: return None, 'Error: 错误的 gid', None, None, *_make_tx_guess_list(gid)
 
-  return inst.username, inst.info, inst.info_round, inst.img, *CLEAR_GUESS_LIST
-
+  return inst.username, inst.info, inst.info_round, inst.img, *_make_tx_guess_list(gid)
 
 def game_guess(gid:str, *guess_list:str) -> tuple:
   ''' ~return: tx_gid, tx_info, tx_info_round, img_sd, *tx_guess_list '''
@@ -153,7 +167,7 @@ def game_guess(gid:str, *guess_list:str) -> tuple:
   gid = gid.strip()
   guess_list = [s.strip() for s in guess_list]
   inst = states.get(gid)
-  if inst is None: return None, 'Error: 错误的 gid', None, None, *CLEAR_GUESS_LIST
+  if inst is None: return None, 'Error: 错误的 gid', None, None, *_make_tx_guess_list(gid)
 
   # 更新注册玩家的最近在线时间戳
   rec = None
@@ -163,30 +177,44 @@ def game_guess(gid:str, *guess_list:str) -> tuple:
     rec = records[inst.username]
     rec.ts = now_ts()
 
+  def is_answer_match(answer:str, candidates:List[str]) -> bool:
+    if answer in candidates:
+      return True
+    for indv in candidates:
+      if not indv: continue
+      if answer in indv or indv in answer:
+        return True
+    return False
+
+  def get_iou(answer:str, guess:str) -> float:
+    vset, pset = set(answer), set(guess)
+    return len(vset & pset) / len(vset | pset)
+
   # 猜对了吗猜对了吗猜对了吗？？
-  rnd = len(SD_PEEP_STEPS) - len(inst.imgs)
-  if inst.ans in guess_list[:GAME_GUESS_CHOICES[rnd]]:
+  info_score = ''
+  valid_guesses = guess_list[:GAME_GUESS_CHOICES[inst.round]]
+  if is_answer_match(inst.ans, valid_guesses):
     game_destroy(gid)
-    info_suffix = ''
     if not inst.guest:
-      score = GAME_GUESS_SCORES[rnd]
+      score = GAME_GUESS_SCORES[inst.round]
       rec.score += score
       rec.count += 1
       save_records()
       rank = query_rank(inst.username)
-      info_suffix = f'玩家【{inst.username}】获得 {score} 分，累计积分：{rec.score}，平均分排名第 {rank}。'
-    return '', f'恭喜你猜对啦，答案就是 【{inst.ans}】！{info_suffix}', '', inst.img, *CLEAR_GUESS_LIST
-  
-  # 下一张图
-  img = inst.imgs.pop(0)
-  if inst.imgs:   # 继续
-    return gid, inst.info, inst.info_round, inst.img, *CLEAR_GUESS_LIST
-  else:           # 强制结束
+      info_score = f'玩家【{inst.username}】获得 {score} 分，累计积分：{rec.score}，平均分排名第 {rank}。'
+    return '', f'恭喜你猜对啦，答案就是 【{inst.ans}】！{info_score}\n{inst.info_puzzle}', '', inst.img_final, *_make_tx_guess_list(gid)
+
+  if inst.round == GAME_GUESS_ROUND:  # 强制结束
     game_destroy(gid)
-    info_suffix = ''
     if not inst.guest:
       rec.count += 1
       save_records()
       rank = query_rank(inst.username)
-      info_suffix = f'玩家【{inst.username}】累计积分：{rec.score}，平均分排名第 {rank}。'
-    return '', f'好像没猜中哦……正确答案是 【{inst.ans}】，下次好运吧！{info_suffix}', '', img, *CLEAR_GUESS_LIST
+      info_score = f'玩家【{inst.username}】累计积分：{rec.score}，平均分排名第 {rank}。'
+    return '', f'好像没猜中哦……正确答案是 【{inst.ans}】，下次好运吧！{info_score}\n{inst.info_puzzle}', '', inst.img_final, *_make_tx_guess_list(gid)
+  
+  # 继续
+  match_scores = {guess: int(100 * get_iou(inst.ans, guess)) for guess in valid_guesses}
+  inst.info = f'答案好像不太对哦，匹配程度: {match_scores}'
+  inst.imgs.pop(0)      # 切下一张图
+  return gid, inst.info, inst.info_round, inst.img, *_make_tx_guess_list(gid)

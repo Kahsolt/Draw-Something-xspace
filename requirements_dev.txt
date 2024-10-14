@@ -1,5 +1,5 @@
 # for dev only
-torch-gpu
+# pytorch-gpu
 diffusers
 huggingface_hub
 safetensors
