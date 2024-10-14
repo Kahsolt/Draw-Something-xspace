@@ -101,28 +101,33 @@ def game_create(username:str) -> tuple:
   is_guest = not username or username.startswith(GUETST_USERNAME_PREFIX)
   realname = username or rand_username()
 
-  # 关闭旧局
+  # 取消ban
   if realname in ban_users:
     pass
-  else:
-    gid = None
-    for id, inst in states.items():
-      if inst.username == realname:
-        gid = id
-        break
-    if gid:
-      game_destroy(gid)
+  # 关闭旧局
+  gid = None
+  for id, inst in states.items():
+    if inst.username == realname:
+      gid = id
+      break
+  if gid:
+    game_destroy(gid)
+    if not 'enable ban':
       ban_aborts[realname] = ban_aborts.get(realname, 0) + 1
       if ban_aborts[realname] > GAME_ABORT_BAN_TOL:
         ban_users.add(realname)
         return None, None, 'Error: 该玩家仍在封禁期', None, None, *CLEAR_GUESS_LIST
 
   # 新开一局
-  gid  = rand_gid()
-  ans  = rand_ans()
-  text = rand_prompt(ans)
-  imgs = rand_image_set(text)
-  inst = State(realname, ans, text, imgs, guest=is_guest)
+  gid   = rand_gid()
+  words = rand_words()
+  text  = rand_prompt(words[1])  # en
+  imgs  = rand_image_set(text)
+  inst  = State(realname, words[0], text, imgs, guest=is_guest)
+  if IS_WIN:
+    print(f'[gid-{gid}]:')
+    print('  words:', words)
+    print('  text:', text)
   states[gid] = inst
 
   return realname, gid, inst.info, inst.info_round, inst.img, *CLEAR_GUESS_LIST

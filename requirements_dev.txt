@@ -1,0 +1,8 @@
+# for dev only
+torch-gpu
+diffusers
+huggingface_hub
+safetensors
+matplotlib
+translate
+tdqm

@@ -1,0 +1,591 @@
+书 book
+井 water well
+耳 ear
+光盘 CD
+凉鞋 slippers
+学生 student
+床 bed
+油 oil
+牛 cow
+狗 dog
+电视 television
+笔 pen
+地图 map
+奶牛 dairy cattle
+帽子 hat
+弓箭 bow
+狐狸 fox
+狼 wolf
+电锯 saw
+碗 bowl
+红色 red
+苍蝇 fly
+蚂蚁 ant
+蜜蜂 bee
+蝉 cicada
+蝙蝠 bat
+公鸡 cock
+刀 knife
+厨师 Cook
+环 ring
+啤酒 beer
+国王 king
+坦克 tank
+头盔 helm
+工作 work
+月球 moon
+自行车 bike
+梳子 comb
+游戏 game
+灰色 gray
+烟 smoke
+牛奶 milk
+狮子 lion
+猪 pig
+猫头鹰 owl
+玩具 toys
+瑜伽 yoga
+皮带 belt
+石头 rock
+硬币 coin
+老板 boss
+花瓶 vase
+虎 tiger
+蛇 snake
+蛋糕 cake
+螃蟹 crab
+蟾蜍 toad
+丸子 dango
+凳子 stool
+包子 baozi
+咖啡厅 cafe
+围巾 scarf
+围裙 apron
+土豆 potato
+圣经 bible
+女王 Queen
+小偷 fhief
+小鸡 chick
+年糕 Chinese New Year Cake
+床单 sheet
+房子 house
+扑克 poker
+扫帚 broom
+披萨 pizza
+斑马 zebra
+杏子 apricot
+柠檬 lemon
+树木 trees
+树林 trees
+桃子 Peach
+桃花 peach
+桌子 table
+桥 Bridge
+椅子 Chair
+橙 Orange
+武术 Wushu
+洋葱 onion
+激光 Laser
+火柴 Match
+火炬 Torch
+火车 Train
+灯 Lights
+照片 Photo
+猎鹰 Eagle
+玻璃 glass
+珍珠 Pearl
+瓜子 Egusi
+电钻 Drill
+盖帽 block
+眼泪 Tears
+秃子 baldy
+笙 Sheng!
+笛子 flute
+股票 Stock
+胖子 fatty
+芒果 Mango
+苹果 Apple
+荷花 Lotus
+葡萄 Grape
+虾 Shrimp
+蜂蜜 Honey
+蜗牛 snail
+衬衣 Shirt
+袜子 Socks
+课桌 Desks
+乌鸦 Corvus
+兔子 Rabbit
+兵器 Weapon
+匕首 Dagger
+厕所 Toilet
+古筝 zither
+吃货 Foodie
+地球仪 globe
+寒战 Chills
+小品 Sketch
+工人 Worker
+工资 Salary
+弹簧 Spring metal
+律师 Lawyer
+手套 Gloves
+手机 Mobile
+扣子 button
+扳手 Wrench
+枇杷 Loquat
+棉花 Cotton
+榴莲 Durian
+樱桃 Cherry
+歌手 Singer
+母亲 Mother
+水泥 Cement
+水獭 Otters
+水蜜桃 Peach
+水饺 Jiaozi
+海绵 Sponge
+海象 Walrus
+演员 Actors
+潜水 Diving
+火箭 Rocket
+烟台 Yantai
+猴子 Monkey
+琵琶 loquat
+白鳍豚 Baiji
+监狱 Prison
+相机 Camera
+眼镜蛇 cobra
+短裤 Shorts
+窗 Windows
+红枣 Jujube
+纸巾 Tissue
+网球 Tennis
+胃 Stomach
+腰带 girdle
+芝麻 Sesame
+花朵 Flower
+花车 Floats
+蜘蛛 spider
+蜥蜴 lizard
+螳螂 mantis
+螺丝 Screws
+蟒蛇 python
+袖子 Sleeve
+警报器 Alarm
+乞丐 Begging
+仙人掌 Cactus
+企鹅 Penguin
+剃头 Shaving
+发簪 hairpin
+唱歌 Singing
+圆规 compass
+士兵 Soldier
+天蝎 Scorpio
+太阳系 Ia Sol
+婚礼 Wedding
+守门员 Keeper
+小草 Xiaocao
+屈原 Qu Yuan
+手枪 Handgun
+折纸 origami
+拖鞋 Slipper
+播放器 Player
+放风筝 Kiting
+教师 Teacher
+旅游 Tourism
+杠铃 Barbell
+极昼 Ji Zhou
+核桃 Walnuts
+桌球 snooker
+桌面 desktop
+棉被 Blanket
+椰子 Coconut
+母鸡 Chicken
+油条 Youtiao
+海鸥 Seagull
+火山 Volcano
+火星人 Nobody
+火锅 Hot Pot
+火龙果 Pitaya
+热狗 Hot-Dog
+照相机 Camera
+猪脚 tatsumi
+猫 cats
+球拍 Racquet
+理发师 Barber
+生物 Biology
+画 Painting
+画画 drawing
+疯子 Lunatic
+眼镜 Glasses
+睫毛 Eyelash
+社会 Society
+篝火 bonfire
+精卫 Jingwei
+精油 essence
+纽扣 BUTTONS
+网址 Website
+老师 Teacher
+耳垂 earlobe
+芍药 Shaoyao
+芭蕾舞 Ballet
+茉莉 Jasmine
+菠菜 Spinach
+蝌蚪 Tadpole
+蝙蝠侠 Batman
+蟋蟀 cricket
+观音 Guanyin
+诗 Poem
+麻将 Mahjong
+不倒翁 Tumbler
+亭 Ting Wang
+保龄球 Bowling
+刺猬 Hedgehog
+剪刀 Scissors
+印刷 Printing
+口红 lipstick
+图书馆 library
+坚果 Wallnut
+树 tree
+大象 Elephant
+射击 Shooting
+手提电脑 Laptop
+手术刀 Scalpel
+手镯 Bracelet
+打印机 Printer
+拖拉机 Tractor
+日历 Calendar
+月饼 Mooncake
+杂技 Juggling
+松鼠 Squirrel
+棒冰 popsicle
+榛子 hazelnut
+流口水 Slobber
+流浪者 vagrant
+涂鸦 Graffiti
+游泳 swimming
+火影忍者 Naruto
+热气球 Balloon
+电梯 Elevator
+电脑 Computer
+睫毛膏 Mascara
+绘画 Painting
+羚羊 Antelope
+老鼠 Muroidea
+自行车 Bicycle
+茄子 Eggplant
+茶叶蛋 Tea Egg
+茶馆 Teahouse
+萤火虫 Firefly
+蘑菇 Mushroom
+蚂蚱 Malzahar
+蚊子 mosquito
+蜡烛 candle
+蝎子 scorpion
+衣柜 Wardrobe
+衣橱 Wardrobe
+袋鼠 Kangaroo
+书包 Randoseru
+人造卫星 artificial satellite
+修理工 mechanic
+冰刀 Ice Blade
+冰块 Ice Block
+冰棍 Ice lolly
+化学 Chemistry
+口琴 Harmonica
+外套 coats
+头痛 Headache
+射箭 arrowfire
+手铐 Handcuffs
+明信片 Postcard
+果茶 fruit tea
+棒棒糖 Lollipop
+毛笔 Ink brush
+水母 Jellyfish
+沙漏 hourglass
+海水 Sea water
+烟花 Fireworks
+牙签 Toothpick
+牛头人 Minotaur
+猩猩 Orangutan
+甘蔗 Sugarcane
+电影 Filmology
+笔记本电脑 Laptop
+糖葫芦 Tanghulu
+红灯 Red light
+纸杯 paper cup
+绿茶 Green tea
+背包 Inventory
+花花公子 Playboy
+菠萝 Pineapple
+蓝莓 Blueberry
+蜻蜓 Dragonfly
+蝴蝶 Butterfly
+蝴蝶结 bbowknot
+蟑螂 Cockroach
+酱油 Soy sauce
+乌贼 Cuttlefish
+仪表盘 Dashboard
+内裤 Underpants
+冰激凌 ice cream
+变色龙 Chameleon
+台灯 Table Lamp
+台球 Cue sports
+名字 First Name
+墨镜 sunglasses
+宇航员 Astronaut
+导游 Tour guide
+开心果 Pistachio
+快板 Quickboard
+手风琴 Accordion
+掌纹 palm lines
+排球 Volleyball
+教科书 Textbooks
+曲别针 Paperclip
+替罪羊 scapegoat
+果树 fruit tree
+柚子 Grapefruit
+桌布 Tablecloth
+水波 Water Wave
+水管 Water pipe
+河蟹 River crab
+河豚 Pufferfish
+流氓兔 Mashimaro
+流鼻血 Nosebleed
+海龟 Sea Turtle
+滑板 Skateboard
+潜水艇 Submarine
+灰太狼 Gray Wolf
+炒菜 stir-fried
+犀牛 Rhinoceros
+玩游戏 Play game
+癞蛤蟆 Lame Toad
+皮筋 rubberBand
+相声 Xiangsheng
+相片 Photograph
+眼睫毛 Eye Slash
+秃顶 bald crown
+科学家 Scientist
+竞技 Tournament
+筷子 Chopsticks
+篮球 Basketball
+红眼病 Pink eye 
+羽毛球 Badminton
+耳机 Headphones
+舞狮 Lion dance
+茶叶 Tea
+荷包蛋 Fried egg
+话筒 Microphone
+兔八哥 Bugs Bunny
+北极熊 polar bear
+吹风机 Hair dryer
+咖啡杯 Coffee cup
+啄木鸟 Woodpecker
+喇叭 Loudspeaker
+四季豆 Green bean
+大本钟 Great Bell
+婚车 wedding car
+实验室 Laboratory
+忍者 ninja
+手电筒 Flashlight
+旱鸭子 Landlubber
+杀生丸 Sesshomaru
+杯子 Bei&apos;zi
+极乐世界 Sukhāvatī
+比赛 Competition
+水表 Water meter
+海豚 dolphin
+海鱼 marine fish
+游泳衣 Swimsuits?
+灰姑娘 Cinderella
+照相 Photography
+牙膏 Toothpastes
+理发店 Barbershop
+电吹风 Hair Dryer
+直升机 Helicopter
+眉笔 Make-Up Ink
+石榴 pomegranate
+程序员 Programmer
+米饭 Cooked rice
+红蜘蛛 Starscream
+芋头 Chinese Yam
+花菜 Cauliflower
+衣服 clothes
+中暑 Hyperthermia
+兔女郎 rabbit girl
+八哥 Crested myna
+冬瓜 Winter melon
+剪纸 Papercutting
+压岁钱 Lucky Money
+原子弹 Atomic bomb
+夜市 Night market
+旅行箱 Travel case
+果干 Dried fruits
+干果 Dried fruits
+水壶 Water bottle
+海盗船 Pirate Ship
+温度计 Thermometer
+火柴盒 matchbox 
+火鸡 fire chicken
+烟斗 Smoking pipe
+电饭煲 Rice cooker
+电饭锅 Rice cooker
+电鳗 Electric Eel
+红薯 Sweet potato
+股市 Stock market
+舞蹈 dance
+花瓣 flower petal
+薯条 French fries
+薯片 potato chips
+蟠桃 Saturn Peach
+读卡器 Card reader
+乒乓球 Table Tennis
+京剧 Beijing opera
+体温计 Thermometers
+信鸽 Homing pigeon
+冰箱 Refrigerators
+北京烤鸭 Peking duck
+卫生纸 toilet paper
+双眼皮 both eyelids
+圣诞老人 Santa Claus
+拖地 mop floor
+指甲剪 Nail clipper
+晚会 Evening party
+椰汁 Coconut Juice
+橡皮 Pencil rubber
+欢乐谷 Happy Valley
+泡泡堂 Crazy Arcade
+灯笼 Paper lantern
+烧麦 roasted wheat
+热水器 Water heater
+牛肉面 beef noodles
+电冰箱 Refrigerator
+电灯 Electric lamp
+电线 Electric wire
+画板 Drawing Board
+白果 Ginkgo biloba
+皮鞋 leather shoes
+盗墓 Grave Robbing
+网线 Network cable
+菜刀 Kitchen Knife
+螺丝刀 Screwdrivers
+话剧 Straight play
+人参果 ginseng fruit
+元旦 New Year's Day
+切菜板 Cutting board
+彩电 Television set
+手链 chain bracelet
+椰树 Cocos nucifera
+烘干机 Clothes dryer
+热带鱼 Tropical Fish
+电脑桌 Computer Desk
+电风扇 Electric fans
+社交 Social contact
+红蜻蜓 Red Dragonfly
+衣架 Clothes hanger
+吸尘器 Vacuum cleaner
+扫地 sweep floor
+指甲钳 nail clippers 
+杏 Prunus Armeniaca
+梳妆台 Dressing Table
+洗衣粉 Laundry powder
+狗尾巴草 green foxtail
+电视机 Television set
+糯米饭 Glutinous rice
+落地灯 Floor Lamp
+蛋炒饭 Egg Fried Rice
+蜈蚣 Peteris Vittata
+请帖 invitation card
+请柬 invitation card
+课程表 Class Schedule
+豆沙包 Bean Paste Bun
+丝瓜 Luffa aegyptiaca
+垃圾桶 Waste container
+大猩猩 Gorilla gorilla
+大观园 Prospect Garden
+床头柜 Bedside cabinet
+微波炉 Microwave ovens
+情人节 Valentine's Day
+方便面 Instant noodles
+流星 Meteoroid#Meteor
+火车站 Railway station
+燕窝 Bird's nest soup
+番石榴 Psidium guajava
+空调 Air conditioning
+端午节 Duanwu Festival
+蜡笔 Grease Pencil
+解放军 Liberation Army
+升旗 to put up a flag 
+发卡 Issuance of Cards
+扇子 Foldable Hand Fan
+日光灯 Fluorescent lamp
+狼外婆 Wolf Grandmother
+电动车 Electric Vehicle
+电子秤 Electronic scale
+电热毯 Electric blanket
+篮球场 Basketball court
+草莓 Garden strawberry
+葫芦娃 Calabash Brother
+藏羚羊 Tibetan antelope
+冰糖葫芦 caramelized haws
+扬子鳄 Chinese alligator
+拖地板 Mopping floor
+果子狸 Masked palm civet
+灭火器 Fire extinguisher
+百香果 Passiflora edulis
+糖果屋 Hansel and Gretel
+网红 internet celebrity
+美女 gorgeous women
+航空母舰 Aircraft carrier
+菊花茶 Chrysanthemum tea
+人头马 Human-headed Horse
+医院 Hospital treatment.
+护肤品 Skin care products
+火焰山 Mountain of Flames
+爆米花 Making rice krispy
+牛郎织女 Altair and Vega
+狗熊 black bear
+经纬度 Latitude / Longitude
+苦瓜 Momordica charantia
+护身符 protection talisman
+秋裤 long underwear pants
+鞋带 shoe lace
+结婚证 Marriage Certificate
+莲藕 Nelumbo nucifera#Uses
+观音菩萨 Bodhisattva Guanyin
+扑克牌 Standard 52-card deck
+日环食 Annular solar eclipse
+沙枣 Elaeagnus Angustifolia
+七夕 Chinese Valentine’s Day
+公安局 Public security bureau
+含羞草 Mimosa sensor detector
+灯泡 Incandescent light bulb
+美女蛇 Beautiful Female Snake
+剪指甲 cut your hair/nails 
+医生 Doctor
+洗衣机 Clothes washing machine
+石膏 Gypsum (Fibrosum Gypsum)
+昙花 Queen of Night Flower
+妇女节 International Women's Day
+对牛弹琴 play lute to cow
+双面胶 Double-sided adhesives
+头破血流 head broken, blood flowing
+果蝇 Fruit flies; hoppers Mustard
+外星人 Extraterrestrials in fiction
+电话 telephone
+水漫金山 Flooding of Jinshan Temple
+兵马俑 Terracotta Soldiers &amp; Horses
+山楂 Hawthorn Fruit (Fructus Crataegi)
+玫瑰花 Rose flower (Flos Rosae Rugosae)
+眼高手低 to be fastidious but incompetent
+自作主张 act on one's own initiative
+草船借箭 borrow arrows with ships of straw
+城管 Urban Management and Law Enforcement
+画龙点睛 paint a dragon and dot in eyes
+山药 Common Yam Rhizome (Rhizoma Dioscoreae)
+菊花 Chrysanthemum Flower
+耳坠 Oval Drop Earrings (Sparkle Ball Earrings)
+皮影 Shadow, also known as puppet show, lamp shadow.
+木瓜 Common Floweringqince Fruit (Chaenomelis Fructus)
+升国旗 Raise national flag. Sing national anthem! Salute!
+蒜头 Mash red onion, garlic, galangal, ginger, and citronella. 
+藕 lotus roots
+镜子 mirror
