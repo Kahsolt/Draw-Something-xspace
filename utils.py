@@ -24,7 +24,7 @@ BASE_PATH = Path(__file__).parent
 ASSET_PATH = BASE_PATH / 'assets'
 RUN_PATH = BASE_PATH / 'run' ; RUN_PATH.mkdir(exist_ok=True)
 RECORD_FILE = RUN_PATH / 'record.json'
-WORDS_FILE = ASSET_PATH / 'words-revised.txt'
+WORDS_CATEGORY_PATH = ASSET_PATH / 'category'
 
 
 ''' Env '''
@@ -50,9 +50,6 @@ def init_env():
       os.chdir('mindone')
       os.system('pip install -e .')
       os.chdir(cwd)
-      import shutil
-      shutil.rmtree('mindone')
-      del shutil
 
   os.environ['INIT_FLAG'] = '1'
 
@@ -77,13 +74,25 @@ words: List[Tuple[str, str]] = None  # (cn, en)
 def rand_words() -> Tuple[str, str]:
   global words
   if words is None:
-    with open(WORDS_FILE, 'r', encoding='utf-8') as fh:
-      lines = [ln for ln in fh.read().strip().split('\n')]
     words = []
-    for line in lines:
-      cp = line.find(' ')
-      words.append((line[:cp], line[cp+1:].lower()))
-  return random.choice(words)
+    for fp in WORDS_CATEGORY_PATH.iterdir():
+      category = fp.stem
+      with open(fp, 'r', encoding='utf-8') as fh:
+        lines = [ln.strip() for ln in fh.read().strip().split('\n')]
+      for line in lines:
+        if not line or line.startswith('#'): continue
+        cp = line.find(' ')
+        word_cn, word_en = line[:cp], line[cp+1:].lower()
+        if category == 'misc':
+          word_en = f'{word_en} (common object)'
+        else:
+          word_en = f'{word_en} ({category})'
+        words.append((word_cn, word_en))
+    print('>> loaded len(words):', len(words))
+
+  word_cn, word_en = random.choice(words)
+  word_cn_sel = random.choice(word_cn.split('/')) if '/' in word_cn else word_cn
+  return word_cn_sel, word_en 
 
 rand_words()  # warm up
 
@@ -135,8 +144,8 @@ PROMPT_TEMPLATE = [
   'biomechanical style {prompt} . blend of organic and mechanical elements, futuristic, cybernetic, detailed, intricate',
   'biomechanical cyberpunk {prompt} . cybernetics, human-machine fusion, dystopian, organic meets artificial, dark, intricate, highly detailed',
   'cybernetic style {prompt} . futuristic, technological, cybernetic enhancements, robotics, artificial intelligence themes',
-  'cybernetic robot {prompt} . android, AI, machine, metal, wires, tech, futuristic, highly detailed',
-  'cyberpunk cityscape {prompt} . neon lights, dark alleys, skyscrapers, futuristic, vibrant colors, high contrast, highly detailed',
+  #'cybernetic robot {prompt} . android, AI, machine, metal, wires, tech, futuristic, highly detailed',
+  #'cyberpunk cityscape {prompt} . neon lights, dark alleys, skyscrapers, futuristic, vibrant colors, high contrast, highly detailed',
   'futuristic style {prompt} . sleek, modern, ultramodern, high tech, detailed',
   'retro cyberpunk {prompt} . 80\'s inspired, synthwave, neon, vibrant, detailed, retro futurism',
   'retro-futuristic {prompt} . vintage sci-fi, 50s and 60s style, atomic age, vibrant, highly detailed',

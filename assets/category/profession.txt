@@ -1,0 +1,39 @@
+厨师 cook
+小偷 thief
+演员 actor
+歌手 singer
+律师 lawyer
+忍者 ninja
+教师/老师 teacher
+医生 doctor
+科学家 scientist
+理发师 barber
+士兵 soldier
+国王/皇帝 king
+女王/王后/皇后 queen
+守门员 goal keeper
+修理工 mechanic
+宇航员 astronaut
+导游 tour guide
+程序员 computer programmer
+侍应生 waiter
+
+医院 hospital
+图书馆 library
+公安局 public security bureau
+火车站 railway station
+理发店 barbershop
+实验室 laboratory
+篮球场 basketball court
+咖啡厅 caffe
+茶馆 teahouse
+监狱 prison
+
+兔八哥 Bugs Bunny
+兔女郎 rabbit girl
+灰太狼 Gray Wolf
+火影忍者 Naruto
+圣诞老人 Santa Claus
+蝙蝠侠 Batman
+观音/观音菩萨 Guanyin, Avalokitesvara Bodhisattva
+葫芦娃 Calabash Brother

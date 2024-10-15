@@ -1,0 +1,36 @@
+帽子 hat
+发卡/发簪 hairpin
+耳坠 earrings
+皮筋 rubber band
+头盔 helm
+眼镜 glasses
+墨镜 sunglasses
+袖子 sleeve
+腰带 girdle
+皮带 belt
+围巾 scarf
+衬衣/T恤 shirts, T-shirts
+手套 gloves
+纽扣/扣子/按钮 button
+短裤 short pants
+秋裤/长裤 long underwear pants
+口红 lipstick
+手镯 bracelet
+手链 chain bracelet
+外套 coats
+蝴蝶结 bow knot, bow tie, rosettle
+内裤 underpants
+围裙 apron
+袜子 socks
+长袜 long socks
+短袜 short socks
+鞋/鞋子 shoes
+皮鞋 leather shoes
+鞋带 shoe lace
+拖鞋 slippers
+
+衣柜/衣橱 wardrobe
+衣架 clothes hanger
+镜子 mirror
+梳子 comb
+梳妆台 dressing table

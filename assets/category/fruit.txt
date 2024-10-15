@@ -1,0 +1,30 @@
+芒果 mango
+柠檬 lemon
+苹果 apple
+葡萄 grapes
+枇杷 loquat
+榴莲 durian
+樱桃 cherry 
+水蜜桃 peach
+桃子 peach
+琵琶 loquat
+核桃 walnuts
+椰子 coconut
+火龙果 pitaya
+菠萝 pineapple
+石榴 pomegranate
+草莓 strawberry
+蓝莓 blueberry
+蟠桃 Saturn Peach
+番石榴/释迦 Psidium Guajava
+百香果 Passiflora Edulis
+桃/桃子 peach
+橙/橘/橙子/橘子 orange
+柚/柚子/西柚/葡萄柚 grapefruit
+枣/红枣 red jujube
+杏/杏子 apricot, Prunus Armeniaca
+山楂 hawthorn fruit, Fructus Crataegi
+木瓜 common flowering-quince, Chaenomelis Fructus
+开心果 pistachio
+榛子 hazelnut
+沙枣 Elaeagnus Angustifolia

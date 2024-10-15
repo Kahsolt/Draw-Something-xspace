@@ -1,0 +1,125 @@
+书/书本/书籍 book
+光盘/光碟/CD CD disk
+床 bed
+油 oil
+电视/电视机 television
+笔/钢笔 pen
+铅笔 pencil
+地图 map
+电锯 saw
+碗/饭碗 bowl
+刀/小刀 knife
+游戏 game
+石头 rock
+硬币 coin
+花瓶 vase
+凳子 stool
+床单 sheet
+房子 house
+扫帚 broom
+桌子 table
+椅子 chair
+激光 laser
+火柴 fire Match
+火炬 torch
+照片/相片 photo
+相机/照相机 camera
+玻璃 glass
+珍珠 pearl
+电钻 drill
+桌/桌子/课桌 desks
+匕首 dagger
+厕所 toilet
+地球仪 globe
+弹簧 metal spring
+电话 telephone
+手机 mobile phone
+扳手 wrench
+海绵 sponge
+窗 windows
+纸巾 tissue
+螺丝 screws
+警报器 alarm
+罗盘 compass
+婚礼 wedding
+手枪 pistol
+播放器 music player
+风筝 kite
+篝火 bonfire
+诗 Poem
+剪刀 Scissors
+手提电脑/笔记本电脑 laptop
+手术刀 scalpel
+打印机 printer
+日历 calendar
+涂鸦 graffiti
+电脑 personal computer
+蜡烛 candle
+冰刀 ice blade
+手铐 Handcuffs
+明信片 Postcard
+毛笔 Ink brush
+沙漏 hourglass
+烟花 Fireworks
+牙签 Toothpick
+电影 Filmology
+仪表盘 Dashboard
+台灯 Table Lamp
+教科书 Textbooks
+曲别针 Paperclip
+桌布 Tablecloth
+水管 Water pipe
+相片 Photograph
+筷子 Chopsticks
+耳机 Headphones
+话筒 Microphone
+吹风机 Hair dryer
+杯子 cup
+纸杯 paper cup
+咖啡杯 coffee cup
+喇叭 Loudspeaker
+手电筒 flashlight
+牙膏 toothpastes
+电吹风 Hair Dryer
+原子弹 Atomic bomb
+旅行箱 Travel case
+水壶 Water bottle
+温度计 thermometer
+火柴盒 matchbox
+烟斗 smoking pipe
+电饭煲/电饭锅 rice cooker
+股市 Stock market
+读卡器 Card reader
+体温计 Thermometers
+冰箱/电冰箱 Refrigerators
+卫生纸 toilet paper
+指甲剪/指甲钳 nail clippers
+橡皮 Pencil rubber
+灯笼 Paper lantern
+热水器 Water heater
+电灯 Electric lamp
+电线 Electric wire
+画板 Drawing Board
+网线 Network cable
+菜刀 Kitchen Knife
+螺丝刀 Screwdrivers
+菜板/切菜板 cutting board
+烘干机 Clothes dryer
+电脑桌 Computer Desk
+电风扇 Electric fans
+吸尘器 Vacuum cleaner
+洗衣粉 Laundry powder
+落地灯 Floor Lamp
+课程表 class schedule
+垃圾桶 waste container, waste bin
+床头柜 Bedside cabinet
+微波炉 Microwave ovens
+空调 Air conditioning
+蜡笔 Grease Pencil
+扇子 Foldable Hand Fan
+日光灯 Fluorescent lamp
+电子秤 Electronic scale
+电热毯 Electric blanket
+灭火器 Fire extinguisher
+灯泡 Incandescent light bulb
+洗衣机 Clothes washing machine

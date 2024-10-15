@@ -1,0 +1,10 @@
+草 grass
+树/树木 tree
+灌木 wood
+甘蔗 sugarcane
+狗尾巴草 green foxtail, Setaria Viridis
+仙人掌 cactus
+棉花 cotton
+含羞草 Mimosa Pudica
+莲/莲花/睡莲 Nelumbo Nucifera
+椰树/椰子树 Cocos Nucifera

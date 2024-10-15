@@ -1,0 +1,19 @@
+头 head
+颅骨/头颅 skull
+耳/耳朵 ears
+耳垂 earlobe
+眼睛 eyes
+眼睫毛 eye slash
+胳膊 arms
+腿 legs
+脚 feet
+手 hands
+颈/脖子 neck
+唇/嘴唇 lip
+嘴 mouse
+心/心脏 heart
+肺 lungs
+胃 stomach
+肠/肠子 intestines
+血管 veins
+掌纹 palm lines

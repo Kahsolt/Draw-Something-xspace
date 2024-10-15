@@ -1,0 +1,18 @@
+钢琴 piano, pianoforte
+羽管键琴 harpsicord
+手风琴 accordion
+吉他 guitar
+贝斯 bass
+鼓 drum
+尤克里里/乌克丽丽 ukulele, ukelele
+提琴/小提琴 violin
+提琴/中提琴 viola
+大提琴 cello
+竖琴 harp
+口琴 harmonica
+筝/古筝 zither
+长笛/笛/笛子 flute
+短笛 piccolo
+陶笛 ocarina
+哨笛 tin whistle, penny whistle, feadog
+萨克斯 saxophone

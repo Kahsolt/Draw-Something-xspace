@@ -1,0 +1,28 @@
+篮球 basketball
+足球 football, soccer
+排球 volleyball
+羽毛球 badminton
+网球 tennis
+球拍 tennis racquet
+乒乓球 table tennis
+棒球 baseball
+台球 billiards
+游泳 swim
+射箭/弓箭 bow
+杂技 juggling
+保龄球 bowling
+杠铃 barbell
+折纸 origami
+射击 shooting
+滑板 skateboard
+潜水 diving
+
+麻将 mahjong
+扑克 poker
+
+舞蹈 dance
+瑜伽 yoga
+京剧 Beijing opera
+舞狮/狮舞 lion dance
+芭蕾/芭蕾舞 ballet
+皮影 puppet show, lamp shadow

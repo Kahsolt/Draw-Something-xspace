@@ -1,0 +1,76 @@
+猫 cat
+狗 dog
+狐/狐狸 fox
+狼 wolf
+牛 cow
+奶牛 dairy cattle
+苍蝇 fly
+蚁/蚂蚁 ant
+蜜蜂 bee
+蝉 cicada
+蝙蝠 bat
+鸡/小鸡 chick, chicken
+鸡/母鸡 hen
+鸡/公鸡 cock
+狮/狮子 lion
+猪 pig
+猫头鹰 owl
+虎/老虎 tiger
+蛇 snake
+蟹/螃蟹 crab
+蟹/河蟹 river crab
+斑马 zebra
+鹰/猎鹰 eagle
+海鸥 seagull
+蝌蚪 tadpole
+蛙/青蛙 frog
+蟾蜍/蛤蟆/癞蛤蟆 lame toad
+蟋蟀 cricket
+刺猬 hedgehog
+松鼠 squirrel
+大象 elephant
+羚羊 antelope
+老鼠 mouse, mice
+蜻蜓 dragonfly
+蝴蝶 butterfly
+蟑螂 cockroach
+乌贼 cuttlefish
+变色龙 Chameleon
+乌鸦 Corvus
+兔/兔子 Rabbit
+猴/猴子 monkey
+蜗牛 snail
+虾 shrimp
+眼镜蛇 cobra
+蜘蛛 spider
+蜥蜴 lizard
+螳螂 mantis
+蟒蛇 python
+企鹅 penguin
+河豚 pufferfish
+海龟 sea turtle
+犀牛 rhinoceros
+海豚 dolphin
+鱼 fish
+熊 bear
+熊/北极熊 polar bear
+黑熊/狗熊 black bear
+啄木鸟 woodpecker
+猩猩/大猩猩 Gorilla Gorilla, Orangutan
+藏羚羊 Tibetan antelope
+扬子鳄 Chinese alligator
+果子狸 masked palm civet, Paguma Larvata
+果蝇 fruit flies
+海象 walrus
+水獭 otters
+水母 jellyfish
+萤火虫 firefly
+蚊子 mosquito
+蝗虫/蚱蜢/草蜢/蚂蚱 Caelifera
+蝎子 scorpion
+袋鼠 kangaroo
+信鸽/鸽/鸽子 homing pigeon
+鸽/鸽子 dove
+热带鱼 tropical fish
+八哥 Crested Myna
+电鳗 electric eel
