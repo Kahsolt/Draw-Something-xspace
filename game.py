@@ -86,15 +86,11 @@ def make_ranklist() -> list:
 
 states: States = None
 records: Records = None
-ban_aborts: Dict[str, int] = None
-ban_users: Set[str] = None
 
 def init_globals():
-  global states, records, ban_aborts, ban_users
+  global states, records
   if states     is None: states = {}
   if records    is None: records = load_records()
-  if ban_aborts is None: ban_aborts = {}
-  if ban_users  is None: ban_users = set()
 
 init_globals()
 
@@ -118,22 +114,11 @@ def game_create(username:str) -> tuple:
   is_guest = not username or username.startswith(GUETST_USERNAME_PREFIX)
   realname = username or rand_username()
 
-  # 取消ban
-  if realname in ban_users:
-    pass
   # 关闭旧局
-  gid = None
-  for id, inst in states.items():
+  for gid, inst in states.items():
     if inst.username == realname:
-      gid = id
+      game_destroy(gid)
       break
-  if gid:
-    game_destroy(gid)
-    if not 'enable ban':
-      ban_aborts[realname] = ban_aborts.get(realname, 0) + 1
-      if ban_aborts[realname] > GAME_ABORT_BAN_TOL:
-        ban_users.add(realname)
-        return None, None, 'Error: 该玩家仍在封禁期', None, None, *_make_tx_guess_list(gid)
 
   # 新开一局
   gid   = rand_gid()

@@ -223,8 +223,6 @@ TEXT_HELP_INFO = '''
 - 难度设计 & 提示
   - 题面图像包含的噪声随着轮次数而降低，并会给出正确答案的字数
   - 玩家可以给出的猜测数随轮次数而降低: **3/2/2/1** 个
-- 当前游戏未完成而直接开始新游戏时，会视为放弃游戏
-  - 每连续放弃超过 **3** 次，玩家账号将会被惩罚性地停用 **5 min**
 
 ⚪ 资源链接
 - github: https://github.com/Kahsolt/Draw-Something-xspace
@@ -240,9 +238,6 @@ GAME_GUESS_SCORES = [10, 5, 3, 1]
 # 猜第k张图可用的猜想数
 GAME_GUESS_CHOICES = [3, 2, 2, 1]
 GAME_GUESS_CHOCES_MAX = max(GAME_GUESS_CHOICES)
-# 放弃游戏惩罚性禁用
-GAME_ABORT_BAN_TOL  = 3
-GAME_ABORT_BAN_TEMP = 5 * 60
 
 # SD 绘图参数
 SD_PIPE_CALL_KWARGS = {
