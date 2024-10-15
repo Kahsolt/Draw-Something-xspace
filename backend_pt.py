@@ -5,6 +5,7 @@
 # 扩撒模型引擎 Pytorch  后端
 
 from copy import deepcopy
+from utils import *
 
 import torch
 from diffusers.pipelines import StableDiffusionXLPipeline
@@ -12,8 +13,6 @@ from diffusers.pipelines import StableDiffusionXLPipeline
 from diffusers.models import UNet2DConditionModel, AutoencoderTiny
 from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file
-
-from utils import *
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 dtype = torch.bfloat16

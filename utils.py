@@ -29,7 +29,7 @@ WORDS_FILE = ASSET_PATH / 'words-revised.txt'
 
 ''' Env '''
 
-IS_WIN = sys.platform = 'win32'
+IS_WIN = sys.platform == 'win32'
 
 def init_env():
   if os.getenv('INIT_FLAG'): return
@@ -39,8 +39,20 @@ def init_env():
     os.system('SET HF_ENDPOINT=https://hf-mirror.com')
   else:
     os.system('export HF_ENDPOINT=https://hf-mirror.com')
-    os.system('python -m pip install --upgrade pip')
+    os.system('python -m pip install --upgrade pip -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple')
     os.system('pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple')
+
+    try:
+      import mindone
+    except ImportError:
+      os.system('git clone https://gitee.com/mindspore-lab/mindone')
+      cwd = os.getcwd()
+      os.chdir('mindone')
+      os.system('pip install -e .')
+      os.chdir(cwd)
+      import shutil
+      shutil.rmtree('mindone')
+      del shutil
 
   os.environ['INIT_FLAG'] = '1'
 

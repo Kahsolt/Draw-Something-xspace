@@ -1,8 +1,15 @@
-# for dev only
-# pytorch-gpu
+# pytorch backend
+torch==2.4.1+cu124 -f https://download.pytorch.org/whl/torch_stable.html
 diffusers
-huggingface_hub
 safetensors
+huggingface_hub
+
+# mindspore backend
+mindspore
+git+http://github.com/mindspore-lab/mindone
+openmind_hub
+
+# common
 matplotlib
 translate
 tdqm
