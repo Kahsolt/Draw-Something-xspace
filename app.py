@@ -71,4 +71,4 @@ with gr.Blocks() as app:
     gr.Markdown(TEXT_HELP_INFO)
 
 
-app.launch(max_threads=30)
+app.queue().launch()

@@ -189,7 +189,7 @@ def game_guess(gid:str, *guess_list:str) -> tuple:
       info_score = f'玩家【{inst.username}】获得 {score} 分，累计积分：{rec.score}，平均分排名第 {rank}。'
     return '', f'恭喜你猜对啦，答案就是 【{inst.ans}】！{info_score}\n{inst.info_puzzle}', '', inst.img_final, *_make_tx_guess_list(gid)
 
-  if inst.round == GAME_GUESS_ROUND:  # 强制结束
+  if inst.round == GAME_GUESS_ROUND - 1:  # 强制结束
     game_destroy(gid)
     if not inst.guest:
       rec.count += 1
@@ -199,7 +199,7 @@ def game_guess(gid:str, *guess_list:str) -> tuple:
     return '', f'好像没猜中哦……正确答案是 【{inst.ans}】，下次好运吧！{info_score}\n{inst.info_puzzle}', '', inst.img_final, *_make_tx_guess_list(gid)
   
   # 继续
-  match_scores = {guess: int(100 * get_iou(inst.ans, guess)) for guess in valid_guesses}
-  inst.info = f'答案好像不太对哦，匹配程度: {match_scores}'
+  match_scores = {guess: int(100 * get_iou(inst.ans, guess)) for guess in valid_guesses if guess}
+  inst.info = f'答案好像不太对哦，匹配程度: {match_scores or 0}'
   inst.imgs.pop(0)      # 切下一张图
   return gid, inst.info, inst.info_round, inst.img, *_make_tx_guess_list(gid)

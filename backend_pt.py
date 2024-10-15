@@ -47,6 +47,7 @@ def peep_callback(pipe, step, timestep, callback_kwargs):
   return callback_kwargs
 
 
+@timer
 def rand_image_set(prompt:str) -> List[npimg]:
   init_model()
   kwargs = deepcopy(SD_PIPE_CALL_KWARGS)
@@ -57,3 +58,13 @@ def rand_image_set(prompt:str) -> List[npimg]:
     imgs = [vae_decode(latent) for latent in latents]
   latents.clear()
   return imgs
+
+
+if __name__ == '__main__':
+  from time import time
+
+  for _ in range(10):
+    ts_start = time()
+    imgs = rand_image_set('a cute cat holding a sign saying hello world')
+    ts_end = time()
+    print(f'>> time cost: {ts_end - ts_start:.3f}s')  # ~2.5s

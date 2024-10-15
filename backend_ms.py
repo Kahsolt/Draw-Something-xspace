@@ -14,7 +14,8 @@ from mindone.diffusers.models import ModelMixin, UNet2DConditionModel, Autoencod
 from mindone.diffusers.models.modeling_utils import load_state_dict
 from openmind_hub import om_hub_download, snapshot_download
 
-ms.set_context(mode=ms.PYNATIVE_MODE if IS_WIN else ms.GRAPH_MODE, device_target='CPU' if IS_WIN else 'Ascend', device_id=0)
+# NOTE: 图模式 ms.GRAPH_MODE 下非常慢，可能触发了动态shape导致反复编译 :(
+ms.set_context(mode=ms.PYNATIVE_MODE, device_target='CPU' if IS_WIN else 'Ascend', device_id=0)
 dtype = ms.float16
 
 # repo path
@@ -69,6 +70,7 @@ def init_model():
   vae_decode = lambda latent: vae.decode(latent, return_dict=False)[0][0].permute(1, 2, 0).div(2).add(0.5).clamp(0.0, 1.0).mul(255).astype(ms.uint8).numpy()
 
 
+@timer
 def rand_image_set(prompt:str) -> List[npimg]:
   init_model()
   kwargs = deepcopy(SD_PIPE_CALL_KWARGS)
@@ -91,10 +93,11 @@ if __name__ == '__main__':
   from PIL import Image
   from time import time
 
-  ts_start = time()
-  imgs = rand_image_set('a cute cat holding a sign saying hello world')
-  ts_end = time()
-  print(f'>> time cost: {ts_end - ts_start:.3f}s')
+  for _ in range(10):
+    ts_start = time()
+    imgs = rand_image_set('a cute cat holding a sign saying hello world')
+    ts_end = time()
+    print(f'>> time cost: {ts_end - ts_start:.3f}s')  # ~6.5s
 
   for i, im in enumerate(imgs):
     Image.fromarray(im).save(f'{i}.jpg')

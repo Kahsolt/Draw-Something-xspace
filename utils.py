@@ -12,6 +12,7 @@ import json
 import random
 from uuid import uuid4
 from hashlib import md5
+from time import time
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple, Set, Dict, Callable, Any
@@ -54,6 +55,15 @@ def init_env():
   os.environ['INIT_FLAG'] = '1'
 
 init_env()
+
+def timer(fn):
+  def wrapper(*args, **kwargs):
+    start = time()
+    r = fn(*args, **kwargs)
+    end = time()
+    print(f'[Timer]: {fn.__name__} took {end - start:.3f}s')
+    return r
+  return wrapper
 
 
 ''' Misc Utils '''
@@ -251,11 +261,15 @@ GAME_GUESS_CHOCES_MAX = max(GAME_GUESS_CHOICES)
 # SD 绘图参数
 SD_PIPE_CALL_KWARGS = {
   'prompt': None,  # place holder
-  'height': 1024,
-  'width': 1024,
+  'height': 768,
+  'width': 768,
   'num_inference_steps': 10,
   'guidance_scale': 0.0,    # MUST be off
   'output_type': 'latent',
   'return_dict': False,
 }
 SD_PEEP_STEPS = [4, 6, 7, 9]
+
+# sanity check
+assert len(GAME_GUESS_SCORES) == len(GAME_GUESS_CHOICES)
+assert SD_PEEP_STEPS[-1] == SD_PIPE_CALL_KWARGS['num_inference_steps'] - 1
